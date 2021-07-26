@@ -60,7 +60,7 @@ def interface(line)
 
   commands = [
     "int #{interface_name}",
-    "ip addr #{ip} #{$masks[mask]}"
+    "ip addr #{ip} #{mask}"
   ]
   
   commands << "clock rate 56000" if (is_dce)

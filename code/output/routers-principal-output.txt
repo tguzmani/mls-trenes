@@ -1,0 +1,22 @@
+
+-------------------------------------
+R0
+-------------------------------------
+ena
+config t
+host R0
+exit
+wr
+conf t
+int Se0/2/0
+ip addr  
+no sh
+exit
+int Fa0/0
+ip addr 192.38.129.129 255.255.255.240
+no sh
+exit
+int Fa0/1
+ip addr 192.38.130.41 255.255.255.248
+no sh
+exit

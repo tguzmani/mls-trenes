@@ -1,0 +1,113 @@
+
+-------------------------------------
+R2N
+-------------------------------------
+ena
+config t
+host R2N
+exit
+wr
+conf t
+int Fa0/0
+ip addr 192.38.130.117 255.255.255.252
+no sh
+exit
+int Fa1/0
+ip addr 192.38.130.105 255.255.255.252
+no sh
+exit
+int Se0/0
+ip addr 192.38.130.121 255.255.255.252
+no sh
+exit
+int Se0/1
+ip addr 192.38.130.109 255.255.255.252
+clock rate 56000
+no sh
+exit
+int Se0/2
+ip addr 192.38.130.113 255.255.255.252
+clock rate 56000
+no sh
+exit
+
+-------------------------------------
+R4N
+-------------------------------------
+ena
+config t
+host R4N
+exit
+wr
+conf t
+int Fa0/0
+ip addr 192.38.129.193 255.255.255.240
+no sh
+exit
+int Fa0/1
+ip addr 192.38.129.65 255.255.255.248
+no sh
+exit
+int Se0/3/0
+ip addr 192.38.130.110 255.255.255.252
+no sh
+exit
+
+-------------------------------------
+R6N
+-------------------------------------
+ena
+config t
+host R6N
+exit
+wr
+conf t
+int Fa0/0
+ip addr 192.38.129.209 255.255.255.240
+no sh
+exit
+int Fa0/1
+ip addr 192.38.129.225 255.255.255.240
+no sh
+exit
+int Se0/3/0
+ip addr 192.38.130.114 255.255.255.252
+no sh
+exit
+
+-------------------------------------
+R7N
+-------------------------------------
+ena
+config t
+host R7N
+exit
+wr
+conf t
+int Fa0/0
+ip addr 192.38.128.129 255.255.255.128
+no sh
+exit
+int Fa1/0
+ip addr 192.38.130.118 255.255.255.252
+no sh
+exit
+
+-------------------------------------
+RD
+-------------------------------------
+ena
+config t
+host RD
+exit
+wr
+conf t
+int Se2/0
+ip addr 192.38.130.122 255.255.255.252
+clock rate 56000
+no sh
+exit
+int Fa0/0
+ip addr 192.38.130.192 255.255.255.252
+no sh
+exit
