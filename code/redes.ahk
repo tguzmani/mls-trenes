@@ -35,24 +35,3 @@ IfExist, %I_Icon%
 ::.30::255.255.255.252
 
 :o:.d::DCE
-
-F2::
-  Send, n
-  Sleep 100
-  MouseClick, left
-  Send, .
-Return
-
-F3::
-  Send, n
-  Sleep 100
-  MouseClick, left
-  Send, 192.69.
-Return
-
-F4::
-  Send, n
-  Sleep 100
-  MouseClick, left
-  Send, 171.0.0.
-Return

@@ -108,6 +108,6 @@ clock rate 56000
 no sh
 exit
 int Fa0/0
-ip addr 192.38.130.192 255.255.255.252
+ip addr 192.38.130.129 255.255.255.252
 no sh
 exit
