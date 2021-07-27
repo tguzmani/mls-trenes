@@ -135,6 +135,25 @@ def static(line)
   $output << "ip route #{destiny} #{$masks[mask]} #{next_hop}"
 end
 
+def dhcp(line)
+  command_array = line.split(" ")
+  pool_name = command_array[1]
+  network = command_array[2]
+  mask = command_array[3]
+  gateway = command_array[4]
+  dns = command_array[5]
+
+  commands = [
+    "ip dhcp pool #{pool_name}",
+    "network #{network} #{mask}",
+    "default-router #{gateway}",
+    "dns-server #{dns}",
+    "exit"
+  ]
+
+  $output += commands
+end
+
 def ospf(line)
   command_array = line.split(" ")
   process_id = command_array[1]
@@ -148,6 +167,9 @@ File.open(filename).readlines.each_with_index do |line, i|
   case line
   when /^name*/
     configuration line.split(" ")[1] 
+
+  when /^dhcp*/
+    dhcp line
 
   when /^int*/
     interface line 

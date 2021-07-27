@@ -35,3 +35,11 @@ IfExist, %I_Icon%
 ::.30::255.255.255.252
 
 :o:.d::DCE
+
+!e::
+  Send, ^{Tab}
+  Send, ^{Tab}
+  Send, {Tab}
+  Send, {Space}
+
+return

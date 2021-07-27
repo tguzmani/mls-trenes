@@ -1,0 +1,23 @@
+
+-------------------------------------
+R4N
+-------------------------------------
+ip dhcp pool seguridad-n
+network 192.38.129.192 255.255.255.240
+default-router 192.38.129.193
+dns-server 192.38.130.129
+exit
+
+-------------------------------------
+R6N
+-------------------------------------
+ip dhcp pool control-n
+network 192.38.129.208 255.255.255.240
+default-router 192.38.129.209
+dns-server 192.38.130.129
+exit
+ip dhcp pool atencion-n
+network 192.38.129.224 255.255.255.240
+default-router 192.38.129.225
+dns-server 192.38.130.129
+exit
