@@ -2,19 +2,19 @@ telephony-service
 max-ephones 5
 max-dn 5
 
-ip source-address 192.38.129.161 port 2000
+ip source-address [gateway] port 2000
 
 auto assign 1 to 5
 exit
 
 ephone-dn 1
-number 3301
+number XX01
 exit
 ephone-dn 2
-number 3302
+number XX02
 exit
 ephone-dn 3
-number 3303
+number XX03
 exit
 
 // SWITCH
