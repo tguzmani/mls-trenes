@@ -5,7 +5,7 @@ R4S
 ip dhcp pool seguridad-s
 network 192.38.129.240 255.255.255.240
 default-router 192.38.129.241
-dns-server 192.38.130.129
+dns-server 192.38.130.130
 exit
 
 -------------------------------------
@@ -14,10 +14,10 @@ R6S
 ip dhcp pool control-s
 network 192.38.130.0 255.255.255.240
 default-router 192.38.130.1
-dns-server 192.38.130.129
+dns-server 192.38.130.130
 exit
 ip dhcp pool atencion-s
 network 192.38.130.16 255.255.255.240
 default-router 192.38.130.17
-dns-server 192.38.130.129
+dns-server 192.38.130.130
 exit
