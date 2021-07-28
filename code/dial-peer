@@ -1,0 +1,3 @@
+dial-peer voice 1 voip
+destination-pattern x...
+session target ipv4:[target?]

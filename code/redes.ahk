@@ -25,6 +25,8 @@ IfExist, %I_Icon%
 ; IPs
 :o:.ip::192.38.
 :o:.dns::192.38.130.129
+:o:.es::192.38.130.42
+:?:.em::@mlscontrol.com
 
 ; Masks
 ::.24::255.255.255.0
@@ -37,10 +39,32 @@ IfExist, %I_Icon%
 
 :o:.d::DCE
 
+; !e::
+;   Send, ^{Tab}
+;   Send, ^{Tab}
+;   Send, {Tab}
+;   Send, {Space}
+
+; return
+
 !e::
   Send, ^{Tab}
   Send, ^{Tab}
+  Send, {Tab 11}
+  Send, {Space}
+  Send, {Tab 6}
+  SendRaw, pc4oficinas
+  Send, {Tab}
+  SendRaw, pc4oficinas@mlscontrol.com
+  Send, {Tab}
+  SendRaw, 192.38.130.42
+  Send, {Tab}
+  SendRaw, 192.38.130.42
+  Send, {Tab}
+  SendRaw, pc4oficinas
+  Send, {Tab}
+  SendRaw, pc4oficinas
   Send, {Tab}
   Send, {Space}
-
+  Send, !{F4}
 return
