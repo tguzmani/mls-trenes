@@ -154,6 +154,24 @@ def dhcp(line)
   $output += commands
 end
 
+def phone_dhcp(line)
+  command_array = line.split(" ")
+  pool_name = command_array[1]
+  network = command_array[2]
+  mask = command_array[3]
+  gateway = command_array[4]
+
+  commands = [
+    "ip dhcp pool #{pool_name}",
+    "network #{network} #{mask}",
+    "default-router #{gateway}",
+    "option 150 ip #{gateway}",
+    "exit"
+  ]
+
+  $output += commands
+end
+
 def ospf(line)
   command_array = line.split(" ")
   process_id = command_array[1]

@@ -14,15 +14,15 @@ R6N
 ip dhcp pool boleteria-c
 network 192.38.129.176 255.255.255.240
 default-router 192.38.129.177
-dns-server 192.38.130.130
+dns-server 192.38.130.129
 exit
 ip dhcp pool control-c
 network 192.38.129.160 255.255.255.240
 default-router 192.38.129.161
-dns-server 192.38.130.130
+dns-server 192.38.130.129
 exit
 ip dhcp pool atencion-c
 network 192.38.130.56 255.255.255.248
 default-router 192.38.130.57
-dns-server 192.38.130.130
+dns-server 192.38.130.129
 exit
