@@ -1,0 +1,47 @@
+-------------------------------------
+R6S - atencion-c
+-------------------------------------
+ip dhcp pool atencion-c
+option 150 ip 192.38.130.57
+exit
+telephony-service
+max-ephones 5
+max-dn 5
+ip source-address 192.38.130.57 port 2000
+auto assign 1 to 5
+exit
+ephone-dn 1
+number 2211
+exit
+ephone-dn 2
+number 2212
+exit
+
+// SWITCH   
+interface range fa0/1 - 5
+switchport voice vlan 1
+
+-------------------------------------
+R4S - seguridad-c
+-------------------------------------
+ip dhcp pool seguridad-c
+option 150 ip 192.38.129.145
+exit
+telephony-service
+max-ephones 5
+max-dn 5
+ip source-address 192.38.129.145 port 2000
+auto assign 1 to 5
+exit
+ephone-dn 1
+number 2221
+exit
+ephone-dn 2
+number 2222
+ephone-dn 3
+number 2223
+exit
+
+// SWITCH   
+interface range fa0/1 - 5
+switchport voice vlan 1
